@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Localização e Contato</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #000000;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 50px;
+      margin-right: 10px;
+      filter: invert(100%);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+    }
+
+    nav ul li a:hover {
+      background-color: #555;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .map-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+    }
+
+    .contact-info h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    footer {
+      background-color: #000000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
+      position: absolute;
+      bottom: 0;
+      width: 97.8%;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <a href="home.html">
+            <img src="balanca.png" alt="Logo">
+          </a>
+        </div>
+        <h1>Dia do Advogado Trabalhista</h1>
+        <nav>
+          <ul>
+            <li><a href="home.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="escritorio.html">Escritório</a></li>
+            <li><a href="localizacao.html">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+
+  <div class="content">
+    <h2>Localização</h2>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122829.57750316586!2d-48.03241525561965!3d-15.834281762248953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2d97a15b0507%3A0x3c3e4472ee75d834!2sUniversidade%20Cat%C3%B3lica%20de%20Bras%C3%ADlia%20-%20C%C3%A2mpus%20Taguatinga!5e0!3m2!1spt-BR!2sbr!4v1687832677300!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="contact-info">
+      <h2>Informações de Contato</h2>
+      <p><strong>Endereço:</strong> Rua dos advogados, 1234, Cidade dos advogados, Estado dos advogados</p>
+      <p><strong>Telefone:</strong> (61) 4002-8922</p>
+      <p><strong>Email:</strong> advogados@trabalhistas.com</p>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 Gabriel Eduardo Barbosa da Silva. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
