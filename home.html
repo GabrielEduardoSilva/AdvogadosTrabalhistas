@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dia do Advogado Trabalhista</title>
+  <style>
+     body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      padding-top: 70px;
+    }
+
+    header {
+    position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #000000;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 50px;
+      margin-right: 10px;
+      filter: invert(100%);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+    }
+
+    nav ul li a:hover {
+      background-color: #555;
+    }
+    section {
+      padding: 20px;
+    }
+    
+    section h2 {
+      color: #000000;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    section p {
+      line-height: 1.5;
+    }
+    
+    footer {
+      background-color: #000000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    #voltar-topo {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #000000;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function getDiaDoAdvogadoTrabalhista() {
+      var dataAdvogadoTrabalhista = new Date();
+      dataAdvogadoTrabalhista.setMonth(5); 
+      dataAdvogadoTrabalhista.setDate(20);
+    
+      var diasDaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+      var diaSemana = diasDaSemana[dataAdvogadoTrabalhista.getDay()];
+    
+      return diaSemana;
+    }
+
+    window.onload = function() {
+      var diaDoAdvogadoTrabalhista = getDiaDoAdvogadoTrabalhista();
+      document.getElementById("dia-semana").innerHTML = diaDoAdvogadoTrabalhista;
+    };
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("voltar-topo").style.display = "block";
+      } else {
+        document.getElementById("voltar-topo").style.display = "none";
+      }
+    };
+    
+    function voltarAoTopo() {
+      document.body.scrollTop = 0; 
+      document.documentElement.scrollTop = 0; 
+    }
+    
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="home.html">
+        <img src="balanca.png" alt="Logo">
+      </a>
+    </div>
+    <h1>Dia do Advogado Trabalhista</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="escritorio.html">Escritório</a></li>
+        <li><a href="localizacao.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h2>Bem-vindo ao Site do Dia do Advogado Trabalhista</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in ex vel urna facilisis maximus eget id est.</p>
+  </section>
+
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <p>Os advogados trabalhistas oferecem uma variedade de serviços para proteger os direitos dos trabalhadores. Alguns dos serviços mais comuns incluem:</p>
+    <ul>
+      <li>Assessoria jurídica em questões trabalhistas;</li>
+      <li>Representação em processos judiciais envolvendo demissões injustas, assédio no local de trabalho, horas extras não pagas, entre outros;</li>
+      <li>Negociação de acordos coletivos de trabalho;</li>
+      <li>Acompanhamento de negociações sindicais;</li>
+      <li>Aconselhamento sobre direitos trabalhistas;</li>
+      <li>Elaboração e revisão de contratos de trabalho;</li>
+      <li>Mediação e resolução de conflitos trabalhistas;</li>
+      <li>Entre outros.</li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Se você tiver alguma dúvida, sugestão ou quiser obter mais informações sobre o Dia do Advogado Trabalhista, entre em contato conosco:</p>
+    <ul>
+      <li>E-mail: gabriel.esilva@a.ucb.br</li>
+      <li>Telefone: (61) 4002-8922</li>
+      <li>Endereço: Taguatinga - Brasília, DF</li>
+    </ul>
+  </section>
+
+  <section id="dia-advogado">
+    <h2>Dia do Advogado Trabalhista</h2>
+    <p>O Dia do Advogado Trabalhista (20 de junho) cairá em:</p>
+    <p id="dia-semana"></p>
+  </section>
+
+  <button id="voltar-topo" onclick="voltarAoTopo()">Voltar ao Topo</button>
+
+  <footer>
+    <p>&copy; 2023 Gabriel Eduardo Barbosa da Silva. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
